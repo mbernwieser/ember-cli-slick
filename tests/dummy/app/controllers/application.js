@@ -36,6 +36,7 @@ export default Controller.extend({
 
   actions: {
     afterChange: function(slick, currentSlide) {
+      // eslint-disable-next-line no-console
       console.log("afterChange", slick, currentSlide);
     }
   }
