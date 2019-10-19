@@ -3,6 +3,8 @@ import Component from '@ember/component';
 import layout from '../templates/components/slick-slider';
 import { InvokeActionMixin } from 'ember-invoke-action';
 
+import $ from 'jquery';
+
 export default Component.extend(InvokeActionMixin, {
   layout: layout,
   accessibility: true,
@@ -61,7 +63,7 @@ export default Component.extend(InvokeActionMixin, {
   _initializeSlick() {
     var _this = this;
 
-    scheduleOnce('actions', this.$(), function() {
+    scheduleOnce('actions', $(), function() {
       _this.invokeAction('slickInit', this[0]);
     });
 
